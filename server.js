@@ -1,7 +1,4 @@
-
-
 //Via mongoose
-
 
 // Imports
 import cors from "cors";
@@ -32,11 +29,6 @@ app.use(globalErr);
 app.listen(PORT, () => {
   console.log(`Server Listening on PORT: ${PORT}`);
 });
-
-
-
-
-
 
 /*
 // Imports
@@ -71,4 +63,3 @@ app.listen(PORT, () => {
 });
 
 */
-
