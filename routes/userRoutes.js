@@ -1,6 +1,5 @@
-
 import express from "express";
-import User from "../models/UserSchema.js";
+import User from "../models/userSchema.js";
 import data from "../utilities/data.js";
 
 const router = express.Router();
@@ -35,11 +34,12 @@ router
 // Update
 router
   .route("/:id")
+  //.route("api/users")
   .put(async (req, res) => {
     let updatedUser = await User.findByIdAndUpdate(
       req.params.id,
       req.body,
-      { new: true, runValidators: true },
+      //{ new: true, runValidators: true },
     );
 
     if (!updatedUser) return res.status(404).json({ error: "User Not Found" });
